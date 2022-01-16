@@ -100,22 +100,22 @@ def onTab_oil(attr, old, new):
 # line_plot.data_source.on_change('selected',onTab_oil)
 tap_tool = TapTool()
 
-hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("oil pressure", "@oil_pressure"), ("time", "@time")])
+hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("y", "@oil_pressure"), ("time", "@time")])
 oil.add_tools(tap_tool)
 oil.add_tools(hover_tool)
 oil.toolbar.logo = None
 
-hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("fuel", "@fuel_pressure"), ("time", "@time")])
+hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("y", "@fuel_pressure"), ("time", "@time")])
 fuel.add_tools(tap_tool)
 fuel.add_tools(hover_tool)
 fuel.toolbar.logo = None
 
-hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("coolant", "@coolant_temp"), ("time", "@time")])
+hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("y", "@coolant_temp"), ("time", "@time")])
 coolant.add_tools(tap_tool)
 coolant.add_tools(hover_tool)
 coolant.toolbar.logo = None
 
-hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("throttle", "@throttle_position"), ("time", "@time")])
+hover_tool = HoverTool(callback=callback_hover, mode='vline', tooltips=[("y", "@throttle_position"), ("time", "@time")])
 throttle.add_tools(tap_tool)
 throttle.add_tools(hover_tool)
 throttle.toolbar.logo = None
